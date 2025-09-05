@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Checkout - Toko Sepatu Pro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Beranda</a>
+      <a href="products.html">Produk</a>
+      <a href="contact.html">Kontak</a>
+      <a href="checkout.html">Checkout</a>
+      <a href="#" id="cartBtn">Keranjang (<span id="cartCount">0</span>)</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Checkout</h1>
+    <div class="checkout-container">
+      
+      <!-- Keranjang Belanja -->
+      <section class="cart-section">
+        <h2>Keranjang Belanja</h2>
+        <ul id="checkoutList"></ul>
+        <div class="summary">
+          <p>Subtotal: <span id="checkoutSubtotal">Rp0</span></p>
+          <p>Ongkir: <span id="checkoutShipping">Rp20.000</span></p>
+          <h3>Total: <span id="checkoutTotal">Rp0</span></h3>
+        </div>
+      </section>
+
+      <!-- Form Pemesan -->
+      <section class="form-section">
+        <h2>Data Pemesan</h2>
+        <form id="orderForm">
+          <label>Nama Lengkap:</label>
+          <input type="text" id="nama" required>
+
+          <label>Email:</label>
+          <input type="email" id="email" required>
+
+          <label>No. Telepon:</label>
+          <input type="tel" id="telepon" required>
+
+          <label>Alamat Pengiriman:</label>
+          <textarea id="alamat" rows="3" required></textarea>
+
+          <h3>Metode Pembayaran</h3>
+          <label><input type="radio" name="pembayaran" value="Transfer Bank" required> Transfer Bank</label><br>
+          <label><input type="radio" name="pembayaran" value="COD" required> Cash On Delivery (COD)</label><br>
+          <label><input type="radio" name="pembayaran" value="E-Wallet" required> E-Wallet (OVO, GoPay, Dana)</label><br>
+
+          <button type="submit" class="checkout-btn">Selesaikan Pesanan</button>
+        </form>
+      </section>
+
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
